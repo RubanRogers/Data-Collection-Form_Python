@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration Form</title>
+
+</head>
+<body style="font-family: 'Arial', sans-serif;background-color: #f4f4f4;margin: 0;padding: 0;display: flex;justify-content: center;align-items: center;height: 100vh;">
+  <div style="background-color: #fff;padding: 20px;border-radius: 8px;width: 100%;max-width: 400px;" class="container">
+
+    <h1 style="text-align: center;color: black">Student Registration</h1>
+    <form style="display: flex;flex-direction: column;" action="/register/" method="POST" autocomplete="off">
+      {% csrf_token %} 
+      <label style="margin-bottom: 5px;font-weight: bold;color: #555;" for="name">Name:</label>
+      <input style="padding: 10px;margin-bottom: 15px;border: 1px solid #ccc;border-radius: 4px;font-size: 16px;" type="text" id="name" name="name" placeholder="Enter your full name" required>
+      
+      <label style="margin-bottom: 5px;font-weight: bold;color: #555;" for="email">Email:</label>
+      <input style="padding: 10px;margin-bottom: 15px;border: 1px solid #ccc;border-radius: 4px;font-size: 16px;" type="email" id="email" name="email" placeholder="Enter your email" required>
+      
+      <label style="margin-bottom: 5px;font-weight: bold;color: #555;" for="phone">Phone Number:</label>
+      <input style="padding: 10px;margin-bottom: 15px;border: 1px solid #ccc;border-radius: 4px;font-size: 16px;" type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+      
+      <label style="margin-bottom: 5px;font-weight: bold;color: #555;" for="DOB">Date Of Birth:</label>
+      <input style="padding: 10px;margin-bottom: 15px;border: 1px solid #ccc;border-radius: 4px;font-size: 16px;color: #555;" type="date" id="Date" name="date" placeholder="DD/MM/YYYY" required>
+      
+      <label style="margin-bottom: 5px;font-weight: bold;color: #555;" for="Location">Location:</label>
+      <input style="padding: 10px;margin-bottom: 15px;border: 1px solid #ccc;border-radius: 4px;font-size: 16px;" type="text" id="Location" name="Location" placeholder="Enter your Location" required>
+      
+      <input style="margin-top: 20px; background-color: green;padding: 10px;color: white;border: none;border-radius: 25px;font-size: 16px;"
+      type="submit" value="Register">
+    </form>
+  </div>
+</body>
+</html>
+
